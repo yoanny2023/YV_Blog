@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<div class="more_container" >
+  <h2>More about the article</h2>
+  <% if (locals.id) {  %>
+  <a class="btn btn-primary" href="/posts">All Posts</a>
+  <a class="btn btn-secondary" href="/edit/<%=id %>">Edit</a>
+  <%  } %>
+
+
+  <% if(locals.article){ %>
+    <h3><%= article.title %></h2>
+    <p> Posted by: <%= article.name %></p>
+    <p><%= article.desc %></p>
+    <p><%= article.message %></p> 
+  <%} %>
+</div>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,39 @@
+
+</main>
+
+<footer>
+  <div class="footer">
+    <a href="" ><i class="fa-brands fa-linkedin"> </i> Linkedin </a>
+    <a href="" ><i class="fa-solid fa-phone-volume"></i>Tel: +244943371181</a>
+    <a href="" ><i class="fa-solid fa-envelope"></i> Email: manuelvaal2021@gmail.com</a>
+  </div>
+</footer> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script >
+ const link = document.querySelectorAll(".footer > a");
+    link[0].addEventListener("mouseover",()=>{
+      link[0].classList.add("linkedin"); 
+  });
+    link[0].addEventListener("mouseleave",()=>{
+      link[0].classList.remove("linkedin"); 
+  });
+
+    link[1].addEventListener("mouseover",()=>{
+      link[1].classList.add("tel"); 
+  });
+    link[1].addEventListener("mouseleave",()=>{
+      link[1].classList.remove("tel"); 
+  });
+
+
+    link[2].addEventListener("mouseover",()=>{
+      link[2].classList.add("email"); 
+  });
+    link[2].addEventListener("mouseleave",()=>{
+      link[2].classList.remove("email"); 
+  });
+ 
+</script> 
+</body>
+</html>

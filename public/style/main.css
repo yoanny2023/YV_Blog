@@ -1,0 +1,332 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header{
+position: sticky;
+top: 0px;
+width: 100%;
+/* border: 2px solid blue; */
+
+
+}
+
+body{
+background-color:white ;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+ 
+ main{ 
+  display: flex;
+  flex-grow: 1;
+} 
+
+.main{
+  border: 2px solid salmon;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+
+}
+.nav_bar{
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  
+}
+
+.nav_bar li{
+list-style: none;
+padding: 3px;
+margin: 5px;
+
+}
+.nav_bar li > a{
+  text-decoration: none;
+  color: white;
+  font-weight:bold;
+}
+.nav_bar li:nth-child(n+2){
+background-color: black;
+color: white;
+padding: 10px;
+padding-inline: 15px;
+font-size: 15px;
+border-radius: 10px;
+border: none;
+}
+
+.nav_bar li:nth-child(n+2):hover{
+  background-color: blue;
+}
+
+#logo{
+  margin-right: auto;
+  font-family: 'Dancing Script', cursive;
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 5px;
+  color: #0000ff;
+  font-size: 2.5rem;
+
+}
+
+h1>span{
+  color: #198754;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create  {
+background-color: green; 
+text-decoration: none;
+font-size: 1rem;
+padding: 8px;
+text-align: center;
+border-radius: 15px;
+color: white;
+}
+.create:hover{
+  background-color: blue;
+}
+
+#blog{
+
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted blue;
+  border-radius: 50%;
+  color: green;
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+
+animation-name: rotate-blog;
+animation-duration: 1.5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-direction:alternate;
+animation-fill-mode: forwards;
+
+}
+
+footer{
+  background-color: bisque;
+/*   border: 2px solid blue; */
+  color:black;
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer a{
+  color: black;
+  text-decoration: none;
+  font-size: 0.8rem;
+  
+}
+.footer a:hover{
+color: purple;
+}
+.linkedin i{
+  color: blue;
+}
+.tel i{
+  color: green;
+}
+.email i{
+  color: orange;
+}
+
+.fa-linkedin,.fa-phone-volume,.fa-envelope{
+  padding-right: 5px;
+}
+/* ************************************************************ */
+/* Create page style */
+.center_form{
+   display: flex;
+  flex-direction: column;
+  align-items: center; 
+  border: 2px solid salmon;
+
+  width: 100%;
+}
+#form-title{
+  margin-bottom: 30px; 
+  font-size: 2rem;
+}
+
+.form_container{
+  background-color: bisque;
+  border: 2px solid black;
+  border-radius: 20px;
+  border: none;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  position: relative;
+  overflow: hidden;
+}
+form{
+  z-index: 3;
+
+}
+.form_container::before{
+  position: absolute;
+  content: "";
+  width:50%;
+  height: 160%;
+  background: linear-gradient(#000,#008000);
+  z-index: 1;
+  transform: rotate(45deg);
+  animation: animate-form 4s 2s linear infinite;
+}
+.form_container::after{
+  position: absolute;
+  content: "";
+  inset: 6.5px;
+  border-radius: 10px;
+  background:bisque;
+ /*  padding: 5px; */
+  z-index: 2;
+  }
+
+.form_item{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.message{
+  display: flex;
+  justify-content: center;
+}
+
+.button{
+display: flex;
+justify-content: center;
+gap: 30px;
+}
+.form_item button{
+  padding: 10px;
+  padding-inline: 25px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;;
+
+}
+.form_item button#send{
+background-color: blue;
+color: white;
+}
+.form_item button#reset{
+  background-color: hsl(0, 0%, 50%);
+  color: black;
+
+  }
+  .form_item button {
+    background-color: hsl(0, 0%, 50%) ;
+  }
+  .form_item button > a{
+    text-decoration: none;
+    color: black;
+  }
+label{
+  display: inline-block; 
+  width: 7.5rem;
+  color: black;
+  font-size: 1rem;
+}
+input{
+  border-radius: 5px; 
+  border: 2px solid black;
+  padding: 2.5px;
+}
+
+.bxs-user{
+  position: absolute;
+  top:8px;
+  right: 10px;
+  color: green;
+}
+/* ********************All Posts page************************ */
+
+.container-post{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  border: 2px solid rebeccapurple;
+  width: 100%;
+
+}
+.post_head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  margin: 0 auto;
+
+}
+.action-btn{
+  margin-bottom: 10px;
+}
+#post-by{
+  margin-bottom: 0px;
+}
+.user-post li{
+   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+
+}
+
+.user-post li{
+  list-style: none;
+}
+
+/*************More page style****************/
+
+.more_container{
+  margin-left: 15px;
+}
+
+
+

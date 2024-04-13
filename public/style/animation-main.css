@@ -1,0 +1,22 @@
+/* Animation */
+@keyframes rotate-blog{
+  from{
+    transform: rotate(0deg) scale(1);
+  }
+  to{
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+
+@keyframes animate-form{
+from{
+transform: rotate(45deg);
+}
+to{
+  transform: rotate(405deg);
+}
+}
+
+.card2:hover::before{
+  animation: animate2 2s linear infinite;
+  }
