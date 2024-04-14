@@ -33,7 +33,17 @@
     link[2].addEventListener("mouseleave",()=>{
       link[2].classList.remove("email"); 
   });
+  function showSidebar(){
+    const sidebar = document.querySelector(".side_bar");
+    sidebar.style.display ="flex";
  
+  }
+
+  function hideSidebar(){
+    const sidebar = document.querySelector(".side_bar");
+    sidebar.style.display ="none";
+  }
+  
 </script> 
 </body>
 </html>

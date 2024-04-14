@@ -22,11 +22,18 @@
 <body id="main_bg">
   <header>
       <nav  >
-        <ul class="nav_bar">
-          <li id="logo">YV_Blog</li> 
+        <ul class="nav_bar side_bar">
+          <li onclick="hideSidebar()" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li> 
           <li><a href="/">Home</a> </li>
           <li><a href="/posts">All Posts</a> </li>
-          <li><a href="">Sign in</a> </li>
+          <li><a href="#">Sign in</a> </li>
+        </ul>
+        <ul class="nav_bar">
+          <li id="logo">YV_Blog</li> 
+          <li class="hideonMobile" ><a href="/">Home</a> </li>
+          <li class="hideonMobile"><a href="/posts">All Posts</a> </li>
+          <li class="hideonMobile"><a href="#">Sign in</a> </li>
+          <li class="menu-icon" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
         </ul>
       </nav>
   </header>
