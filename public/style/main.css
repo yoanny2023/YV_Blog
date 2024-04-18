@@ -3,11 +3,21 @@
   padding: 0px;
   box-sizing: border-box;
 }
+:root{
+  /* variables */
+  --HEADER-BG:#6b123e; 
+  --FOOTER-BG:#6b123e;
+  --MAIN-BG:#fde4ce;
+  --LINK-COLOR: #000;
+
+  --SIDE_BAR-BG:#6b123e;
+}
 
 header{
 position: sticky;
 top: 0px;
 width: 100%;
+z-index: 2;
 /* border: 2px solid blue; */
 
 
@@ -23,15 +33,24 @@ min-height: 100vh;
  main{ 
   display: flex;
   flex-grow: 1;
+
 } 
 
 .main{
+  background-image: url("../images/blog-cafe.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom top ;
+  background-attachment:fixed ;
+    z-index: 1;
+   
   border: 2px solid salmon;
   display: flex;
   flex-direction: column;
   align-items: center; 
   width: 100%;
 
+ 
 }
 .nav_bar{
   background-color: bisque;
@@ -39,6 +58,7 @@ min-height: 100vh;
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
+  padding-left: 0px;
   
 }
 
@@ -56,7 +76,7 @@ margin: 5px;
 .nav_bar li:nth-child(n+2),.side_bar li:nth-child(1){
 background-color: black;
 color: white;
-padding: 10px;
+padding: 8px;
 padding-inline: 15px;
 font-size: 15px;
 border-radius: 10px;
@@ -81,13 +101,16 @@ border: none;
 h1{
   text-align: center;
   margin-bottom: 5px;
-  color: #0000ff;
+ /*  color: hsla(239, 100%, 50%, 0.895); */
+  color: rgb(5, 204, 249);
   font-size: 2.5rem;
 
 }
 
 h1>span{
-  color: #198754;
+/*   color: #198754; */
+  /* color: rgba(0, 0, 0, 0.842); */
+  color: blue;
 }
 
 .main-container{
@@ -111,7 +134,7 @@ color: white;
 }
 
 #blog{
-
+  z-index: 2;
   background-color: bisque;
   width: 100px;
   height: 100px;
@@ -137,7 +160,6 @@ animation-fill-mode: forwards;
 
 footer{
   background-color: bisque;
-/*   border: 2px solid blue; */
   color:black;
   position: sticky;
   bottom: 0px;
@@ -186,7 +208,16 @@ color: purple;
   justify-content: start;
   align-items: start;
   padding-right: 10px;
+
+  animation: slide-left 0.6s;
+  
 }
+.slide-left{
+  animation: slide-left 0.6s;
+}
+/* .slide-right{
+  animation: slide-right 0.6s ;
+} */
 .side_bar li{
   width: 100%;
 
@@ -205,6 +236,7 @@ color: purple;
 #form-title{
   margin-bottom: 30px; 
   font-size: 2rem;
+  color: blue;
 }
 
 .form_container{
@@ -218,6 +250,7 @@ color: purple;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  z-index: 1;
 
   position: relative;
   overflow: hidden;
@@ -234,7 +267,7 @@ form{
   background: linear-gradient(#000,#008000);
   z-index: 1;
   transform: rotate(45deg);
-  animation: animate-form 4s 2s linear infinite;
+  animation: animate-form 4s linear infinite;
 }
 .form_container::after{
   position: absolute;
@@ -325,6 +358,9 @@ input{
   margin: 0 auto;
 
 }
+.post_head  > h1{
+color: blue;
+}
 .action-btn{
   margin-bottom: 10px;
 }
@@ -349,18 +385,133 @@ input{
   margin-left: 15px;
 }
 /* *****************Media query**************************** */
-@media (max-width:400px){
+/* Mobile */
+@media (max-width:480px){
+ 
 .side_bar{
   width: 100%;
 }
+#blog{
+  margin-top: 50px;
 }
+.nav_bar{
+  padding-left: 0px;
+}
+.main-container a{
+  margin-bottom: 20px;
+}
+.form_container{
+  width: 90%;
+  margin-bottom: 10px;
+  /* z-index: -1; */
+}
+footer{
+  z-index: 4;
+}
+
+label{
+  width: 6rem;
+  display: block;
+  font-weight: bold;
+}
+
+#form-title{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+
+}
+.form_item{
+  width: 100%;
+}
+input{
+  width: 100%;
+}
+.message{
+width: 230px;
+}
+.bxs-user{
+  top:34px;
+  right: 12px;
+}
+.btn{
+  font-size: 0.8rem;
+}
+
+}
+/* ipads & tablets */
+@media (min-width:481px){
+ /*  body{
+    background-color: aqua;
+  } */
+  #blog{
+    z-index: -1;
+  }
+
+  .form_container{
+    width: 72%;
+    margin-bottom: 10px;
+   
+  }
+ 
+  label{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  input{
+    width: 100%;
+  }
+  #form-title{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  footer{
+    z-index: 4;
+  }
+  .bxs-user{
+    top:36px;
+    right: 12px;
+  }
+}
+
+  @media (min-width:769px){
+  /*   body{
+      background-color: violet;
+    } */
+    .form_container{
+      width: 68%;
+      
+    }
+    .form_container::before{
+      height: 188%;
+    }
+  }
+  @media(min-width:1025px){
+  /*   body{
+      background-color: aquamarine ;
+    } */
+
+    .form_container{
+      width: 50%;
+      
+    }
+    .form_container::before{
+      height: 194%;
+    }
+ 
+  }
+
 @media (max-width:800px){
  .hideonMobile{
   display:none;
  }
  .menu-icon{
   display: block;
+
  }
+ .menu-icon:hover svg{
+  fill: white;
+ }
+ 
 }
 
 
