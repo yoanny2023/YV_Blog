@@ -1,7 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
-const Api_url = "http://localhost:2000";
+/* const Api_url = "http://localhost:2000"; */
+const Api_url = "https://yv-blog-backend.onrender.com";
 
 const app = express(); 
 const port = 1000;  
