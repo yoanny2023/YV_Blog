@@ -6,7 +6,6 @@ const Api_url = "https://yv-blog-backend.onrender.com";
 
 const app = express(); 
 const port = 1000;  
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -54,7 +53,7 @@ app.get("/edit/:id", async (req,res)=>{
   try {
     const result = await axios.get(`${Api_url}/edit/${req.params.id}`);
     console.log(result.data);
-    res.render("create.ejs", {post: result.data} ); 
+    res.render("create.ejs", {post: result.data[0]} ); 
   } catch (error) {
     res.status(500).json({ message: "Error updating post" });
   }
@@ -80,8 +79,8 @@ app.get("/about/:id",async (req,res)=>{
 console.log("About page is working");
 try {
   const result = await axios.get(`${Api_url}/edit/${req.params.id}`);
-  console.log(result.data);
-  res.render("more.ejs", {article: result.data,
+  console.log("data to send",result.data);
+  res.render("more.ejs", {article: result.data[0],
                           id:req.params.id} 
             ); 
 } catch (error) {

@@ -44,7 +44,7 @@ min-height: 100vh;
   background-attachment:fixed ;
     z-index: 1;
    
-  border: 2px solid salmon;
+ /*  border: 2px solid salmon; */
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -72,20 +72,50 @@ margin: 5px;
   text-decoration: none;
   color: white;
   font-weight:bold;
+
 }
-.nav_bar li:nth-child(n+2),.side_bar li:nth-child(1){
+/* .nav_bar li:nth-child(n+2),.side_bar li:nth-child(1){
 background-color: black;
 color: white;
-padding: 8px;
+ padding: 8px;
 padding-inline: 15px;
 font-size: 15px;
 border-radius: 10px;
 border: none;
+} */
+
+/* .nav_bar li:nth-child(n+2):hover,.side_bar li:nth-child(1):hover{
+  background-color: blue;
+} */
+.hideonMobile a,.menu-icon{
+  background-color: black;
+  color: white;
+   padding: 8px;
+  padding-inline: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
 }
 
-.nav_bar li:nth-child(n+2):hover,.side_bar li:nth-child(1):hover{
-  background-color: blue;
+
+.hideonMobile:hover a{
+  cursor:pointer;
+  background-color: blue; 
+  
 }
+.side_bar li a{
+  background-color: black;
+  display: block;
+  padding: 8px;
+  padding-inline: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+ }
+ .side_bar li a:hover{
+  background-color: blue;
+ }
+
 .menu-icon{
   display: none;
 }
@@ -102,14 +132,12 @@ h1{
   text-align: center;
   margin-bottom: 5px;
  /*  color: hsla(239, 100%, 50%, 0.895); */
-  color: rgb(5, 204, 249);
+  color:blue;
   font-size: 2.5rem;
-
 }
 
 h1>span{
 /*   color: #198754; */
-  /* color: rgba(0, 0, 0, 0.842); */
   color: blue;
 }
 
@@ -218,7 +246,7 @@ color: purple;
 /* .slide-right{
   animation: slide-right 0.6s ;
 } */
-.side_bar li{
+.side_bar >li {
   width: 100%;
 
 }
@@ -229,7 +257,7 @@ color: purple;
    display: flex;
   flex-direction: column;
   align-items: center; 
-  border: 2px solid salmon;
+ /*  border: 2px solid salmon; */
 
   width: 100%;
 }
@@ -264,7 +292,7 @@ form{
   content: "";
   width:50%;
   height: 160%;
-  background: linear-gradient(#000,#008000);
+  background: linear-gradient(#000,blue);
   z-index: 1;
   transform: rotate(45deg);
   animation: animate-form 4s linear infinite;
@@ -344,7 +372,7 @@ input{
   display: flex;
   flex-direction: column;
   align-items:start;
-  border: 2px solid rebeccapurple;
+  /* border: 2px solid rebeccapurple; */
   width: 100%;
 
 }

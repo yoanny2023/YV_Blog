@@ -21,12 +21,12 @@
     
       <div class="form_item">
         <label for="desc">Description:</label>
-        <input type="text" name="desc" value="<%= post.desc %>" id="desc" placeholder="Enter a description"
+        <input type="text" name="desc" value="<%= post.descr %>" id="desc" placeholder="Enter a description"
           required >
       </div>
     
       <div class="form_item message">
-        <textarea name="message" id="message"  placeholder="Enter your comment here"  maxlength="200" minlength="" cols="40" rows="6"> 
+        <textarea name="message" id="message"  placeholder="Write more about your post"  maxlength="200" minlength="" cols="40" rows="6"> 
           <%= post.message %></textarea>   
       </div> 
     
@@ -68,7 +68,7 @@
   </div>
 
   <div class="form_item message">
-    <textarea name="message" id="message" placeholder="Enter your comment here"  maxlength="200" minlength="" cols="40" rows="6"> 
+    <textarea name="message" id="message" placeholder="Write more about your post"  maxlength="200" minlength="" cols="40" rows="6"> 
     </textarea>
   </div>
 
