@@ -16,13 +16,19 @@ const db = new pg.Client({
   ssl     : true
 
 });
+
+/* const itemsPool = new Pool({
+    connectionString: process.env.DBConnLink,
+    ssl: {
+        rejectUnauthorized: false
+    }
+}); */
+
 db.connect();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-let lastId = 0;
-const posts = []; 
 //get all posts
 app.get("/all_posts",async (req,res)=>{
   /* with databse */
